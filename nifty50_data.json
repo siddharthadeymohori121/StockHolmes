@@ -1,0 +1,515 @@
+{
+    "timestamp": "2024-11-25T18:08:38.826495",
+    "stocks": [
+        {
+            "Symbol": "NIFTY 50",
+            "Company Name": "N/A",
+            "Open": 24253.55,
+            "Day High": 24351.55,
+            "Day Low": 24135.45,
+            "Last Price": 24221.9,
+            "Change": 314.65000000000146,
+            "PChange": 1.32
+        },
+        {
+            "Symbol": "ONGC",
+            "Company Name": "Oil & Natural Gas Corporation Limited",
+            "Open": 248.5,
+            "Day High": 260.5,
+            "Day Low": 247.95,
+            "Last Price": 259.05,
+            "Change": 13.45,
+            "PChange": 5.48
+        },
+        {
+            "Symbol": "BEL",
+            "Company Name": "Bharat Electronics Limited",
+            "Open": 290,
+            "Day High": 299,
+            "Day Low": 287.95,
+            "Last Price": 293,
+            "Change": 12.15,
+            "PChange": 4.33
+        },
+        {
+            "Symbol": "LT",
+            "Company Name": "Larsen & Toubro Limited",
+            "Open": 3660,
+            "Day High": 3761,
+            "Day Low": 3654,
+            "Last Price": 3757,
+            "Change": 153.5,
+            "PChange": 4.26
+        },
+        {
+            "Symbol": "BPCL",
+            "Company Name": "Bharat Petroleum Corporation Limited",
+            "Open": 292.05,
+            "Day High": 304.4,
+            "Day Low": 292,
+            "Last Price": 297.3,
+            "Change": 11.45,
+            "PChange": 4.01
+        },
+        {
+            "Symbol": "SHRIRAMFIN",
+            "Company Name": "Shriram Finance Limited",
+            "Open": 2926.95,
+            "Day High": 3015,
+            "Day Low": 2926.95,
+            "Last Price": 2957.65,
+            "Change": 107.6,
+            "PChange": 3.78
+        },
+        {
+            "Symbol": "SBIN",
+            "Company Name": "State Bank of India",
+            "Open": 827,
+            "Day High": 849.6,
+            "Day Low": 825.65,
+            "Last Price": 845.45,
+            "Change": 29.4,
+            "PChange": 3.6
+        },
+        {
+            "Symbol": "APOLLOHOSP",
+            "Company Name": "Apollo Hospitals Enterprise Limited",
+            "Open": 6980,
+            "Day High": 7147,
+            "Day Low": 6930.9,
+            "Last Price": 7115.6,
+            "Change": 180.5,
+            "PChange": 2.6
+        },
+        {
+            "Symbol": "ADANIPORTS",
+            "Company Name": "Adani Ports and Special Economic Zone Limited",
+            "Open": 1185,
+            "Day High": 1191.4,
+            "Day Low": 1139.7,
+            "Last Price": 1163.15,
+            "Change": 26.4,
+            "PChange": 2.32
+        },
+        {
+            "Symbol": "WIPRO",
+            "Company Name": "Wipro Limited",
+            "Open": 575.5,
+            "Day High": 587.55,
+            "Day Low": 573.9,
+            "Last Price": 583.7,
+            "Change": 12.05,
+            "PChange": 2.11
+        },
+        {
+            "Symbol": "TRENT",
+            "Company Name": "Trent Limited",
+            "Open": 6799,
+            "Day High": 6838.55,
+            "Day Low": 6690.05,
+            "Last Price": 6787.6,
+            "Change": 134.8,
+            "PChange": 2.03
+        },
+        {
+            "Symbol": "RELIANCE",
+            "Company Name": "Reliance Industries Limited",
+            "Open": 1290,
+            "Day High": 1304.45,
+            "Day Low": 1282.45,
+            "Last Price": 1290.95,
+            "Change": 25.55,
+            "PChange": 2.02
+        },
+        {
+            "Symbol": "ICICIBANK",
+            "Company Name": "ICICI Bank Limited",
+            "Open": 1296,
+            "Day High": 1311.2,
+            "Day Low": 1290,
+            "Last Price": 1303,
+            "Change": 24.95,
+            "PChange": 1.95
+        },
+        {
+            "Symbol": "HDFCBANK",
+            "Company Name": "HDFC Bank Limited",
+            "Open": 1785.05,
+            "Day High": 1803.55,
+            "Day Low": 1764.9,
+            "Last Price": 1778.95,
+            "Change": 33.35,
+            "PChange": 1.91
+        },
+        {
+            "Symbol": "POWERGRID",
+            "Company Name": "Power Grid Corporation of India Limited",
+            "Open": 341.85,
+            "Day High": 345.4,
+            "Day Low": 336.15,
+            "Last Price": 343.3,
+            "Change": 6.35,
+            "PChange": 1.88
+        },
+        {
+            "Symbol": "TCS",
+            "Company Name": "Tata Consultancy Services Limited",
+            "Open": 4280,
+            "Day High": 4328.1,
+            "Day Low": 4252.2,
+            "Last Price": 4320,
+            "Change": 75.4,
+            "PChange": 1.78
+        },
+        {
+            "Symbol": "KOTAKBANK",
+            "Company Name": "Kotak Mahindra Bank Limited",
+            "Open": 1782,
+            "Day High": 1794.6,
+            "Day Low": 1766.9,
+            "Last Price": 1792,
+            "Change": 30.55,
+            "PChange": 1.73
+        },
+        {
+            "Symbol": "ADANIENT",
+            "Company Name": "Adani Enterprises Limited",
+            "Open": 2315,
+            "Day High": 2333.65,
+            "Day Low": 2238,
+            "Last Price": 2265.2,
+            "Change": 37.2,
+            "PChange": 1.67
+        },
+        {
+            "Symbol": "HEROMOTOCO",
+            "Company Name": "Hero MotoCorp Limited",
+            "Open": 4850,
+            "Day High": 4908.65,
+            "Day Low": 4815,
+            "Last Price": 4866.5,
+            "Change": 72.4,
+            "PChange": 1.51
+        },
+        {
+            "Symbol": "BRITANNIA",
+            "Company Name": "Britannia Industries Limited",
+            "Open": 4905,
+            "Day High": 4980,
+            "Day Low": 4874,
+            "Last Price": 4918,
+            "Change": 69.65,
+            "PChange": 1.44
+        },
+        {
+            "Symbol": "CIPLA",
+            "Company Name": "Cipla Limited",
+            "Open": 1495.9,
+            "Day High": 1507.5,
+            "Day Low": 1487.5,
+            "Last Price": 1507.45,
+            "Change": 20.95,
+            "PChange": 1.41
+        },
+        {
+            "Symbol": "GRASIM",
+            "Company Name": "Grasim Industries Limited",
+            "Open": 2615,
+            "Day High": 2654,
+            "Day Low": 2600.35,
+            "Last Price": 2632,
+            "Change": 33.35,
+            "PChange": 1.28
+        },
+        {
+            "Symbol": "AXISBANK",
+            "Company Name": "Axis Bank Limited",
+            "Open": 1160,
+            "Day High": 1164.5,
+            "Day Low": 1142,
+            "Last Price": 1156.7,
+            "Change": 14.3,
+            "PChange": 1.25
+        },
+        {
+            "Symbol": "HINDALCO",
+            "Company Name": "Hindalco Industries Limited",
+            "Open": 660.1,
+            "Day High": 663,
+            "Day Low": 654.45,
+            "Last Price": 660.05,
+            "Change": 7.95,
+            "PChange": 1.22
+        },
+        {
+            "Symbol": "HINDUNILVR",
+            "Company Name": "Hindustan Unilever Limited",
+            "Open": 2470,
+            "Day High": 2505.7,
+            "Day Low": 2457.6,
+            "Last Price": 2474.95,
+            "Change": 29.7,
+            "PChange": 1.21
+        },
+        {
+            "Symbol": "COALINDIA",
+            "Company Name": "Coal India Limited",
+            "Open": 421,
+            "Day High": 427.45,
+            "Day Low": 415.7,
+            "Last Price": 418.95,
+            "Change": 4.9,
+            "PChange": 1.18
+        },
+        {
+            "Symbol": "M&M",
+            "Company Name": "Mahindra & Mahindra Limited",
+            "Open": 3075,
+            "Day High": 3149.65,
+            "Day Low": 3022.4,
+            "Last Price": 3047.6,
+            "Change": 34.65,
+            "PChange": 1.15
+        },
+        {
+            "Symbol": "TATACONSUM",
+            "Company Name": "TATA CONSUMER PRODUCTS LIMITED",
+            "Open": 950,
+            "Day High": 962.75,
+            "Day Low": 946.6,
+            "Last Price": 955.6,
+            "Change": 10.4,
+            "PChange": 1.1
+        },
+        {
+            "Symbol": "SBILIFE",
+            "Company Name": "SBI Life Insurance Company Limited",
+            "Open": 1492.6,
+            "Day High": 1511,
+            "Day Low": 1488.35,
+            "Last Price": 1499.8,
+            "Change": 14.65,
+            "PChange": 0.99
+        },
+        {
+            "Symbol": "NTPC",
+            "Company Name": "NTPC Limited",
+            "Open": 374,
+            "Day High": 377.2,
+            "Day Low": 367.5,
+            "Last Price": 369,
+            "Change": 3.55,
+            "PChange": 0.97
+        },
+        {
+            "Symbol": "BHARTIARTL",
+            "Company Name": "Bharti Airtel Limited",
+            "Open": 1581.95,
+            "Day High": 1609.25,
+            "Day Low": 1562.55,
+            "Last Price": 1583.45,
+            "Change": 14.15,
+            "PChange": 0.9
+        },
+        {
+            "Symbol": "ULTRACEMCO",
+            "Company Name": "UltraTech Cement Limited",
+            "Open": 11450,
+            "Day High": 11690,
+            "Day Low": 11437.25,
+            "Last Price": 11469.8,
+            "Change": 94.5,
+            "PChange": 0.83
+        },
+        {
+            "Symbol": "SUNPHARMA",
+            "Company Name": "Sun Pharmaceutical Industries Limited",
+            "Open": 1806,
+            "Day High": 1830,
+            "Day Low": 1784.15,
+            "Last Price": 1810,
+            "Change": 14.7,
+            "PChange": 0.82
+        },
+        {
+            "Symbol": "TATAMOTORS",
+            "Company Name": "Tata Motors Limited",
+            "Open": 808.05,
+            "Day High": 810.2,
+            "Day Low": 793.65,
+            "Last Price": 797.4,
+            "Change": 6.4,
+            "PChange": 0.81
+        },
+        {
+            "Symbol": "TATASTEEL",
+            "Company Name": "Tata Steel Limited",
+            "Open": 144.94,
+            "Day High": 146.15,
+            "Day Low": 142.84,
+            "Last Price": 143.87,
+            "Change": 1.09,
+            "PChange": 0.76
+        },
+        {
+            "Symbol": "ITC",
+            "Company Name": "ITC Limited",
+            "Open": 479,
+            "Day High": 482.2,
+            "Day Low": 472.4,
+            "Last Price": 478.15,
+            "Change": 3.5,
+            "PChange": 0.74
+        },
+        {
+            "Symbol": "NESTLEIND",
+            "Company Name": "Nestle India Limited",
+            "Open": 2258.55,
+            "Day High": 2283.65,
+            "Day Low": 2246.25,
+            "Last Price": 2263.85,
+            "Change": 16.55,
+            "PChange": 0.74
+        },
+        {
+            "Symbol": "BAJAJFINSV",
+            "Company Name": "Bajaj Finserv Limited",
+            "Open": 1618,
+            "Day High": 1638.8,
+            "Day Low": 1600,
+            "Last Price": 1612,
+            "Change": 11.15,
+            "PChange": 0.7
+        },
+        {
+            "Symbol": "INDUSINDBK",
+            "Company Name": "IndusInd Bank Limited",
+            "Open": 1020,
+            "Day High": 1022.05,
+            "Day Low": 997.05,
+            "Last Price": 1004,
+            "Change": 5.8,
+            "PChange": 0.58
+        },
+        {
+            "Symbol": "EICHERMOT",
+            "Company Name": "Eicher Motors Limited",
+            "Open": 4999,
+            "Day High": 5067,
+            "Day Low": 4988,
+            "Last Price": 5009,
+            "Change": 22.8,
+            "PChange": 0.46
+        },
+        {
+            "Symbol": "TITAN",
+            "Company Name": "Titan Company Limited",
+            "Open": 3360,
+            "Day High": 3369.85,
+            "Day Low": 3298.05,
+            "Last Price": 3318,
+            "Change": 9.3,
+            "PChange": 0.28
+        },
+        {
+            "Symbol": "BAJFINANCE",
+            "Company Name": "Bajaj Finance Limited",
+            "Open": 6789.9,
+            "Day High": 6863,
+            "Day Low": 6667.3,
+            "Last Price": 6700.05,
+            "Change": 16.1,
+            "PChange": 0.24
+        },
+        {
+            "Symbol": "HDFCLIFE",
+            "Company Name": "HDFC Life Insurance Company Limited",
+            "Open": 690,
+            "Day High": 695.8,
+            "Day Low": 681.4,
+            "Last Price": 688.9,
+            "Change": 0.7,
+            "PChange": 0.1
+        },
+        {
+            "Symbol": "DRREDDY",
+            "Company Name": "Dr. Reddy's Laboratories Limited",
+            "Open": 1233.95,
+            "Day High": 1247,
+            "Day Low": 1205.75,
+            "Last Price": 1215,
+            "Change": 0.55,
+            "PChange": 0.05
+        },
+        {
+            "Symbol": "ASIANPAINT",
+            "Company Name": "Asian Paints Limited",
+            "Open": 2505,
+            "Day High": 2507.95,
+            "Day Low": 2450.05,
+            "Last Price": 2470.7,
+            "Change": -1.5,
+            "PChange": -0.06
+        },
+        {
+            "Symbol": "HCLTECH",
+            "Company Name": "HCL Technologies Limited",
+            "Open": 1919,
+            "Day High": 1919.95,
+            "Day Low": 1878.5,
+            "Last Price": 1896,
+            "Change": -2.4,
+            "PChange": -0.13
+        },
+        {
+            "Symbol": "BAJAJ-AUTO",
+            "Company Name": "Bajaj Auto Limited",
+            "Open": 9560,
+            "Day High": 9636.35,
+            "Day Low": 9392,
+            "Last Price": 9445,
+            "Change": -36.65,
+            "PChange": -0.39
+        },
+        {
+            "Symbol": "MARUTI",
+            "Company Name": "Maruti Suzuki India Limited",
+            "Open": 11202,
+            "Day High": 11247.95,
+            "Day Low": 10990.05,
+            "Last Price": 11003.2,
+            "Change": -60.4,
+            "PChange": -0.55
+        },
+        {
+            "Symbol": "INFY",
+            "Company Name": "Infosys Limited",
+            "Open": 1916,
+            "Day High": 1919.3,
+            "Day Low": 1882,
+            "Last Price": 1891,
+            "Change": -11.25,
+            "PChange": -0.59
+        },
+        {
+            "Symbol": "TECHM",
+            "Company Name": "Tech Mahindra Limited",
+            "Open": 1760,
+            "Day High": 1767.8,
+            "Day Low": 1727.85,
+            "Last Price": 1735,
+            "Change": -12.45,
+            "PChange": -0.71
+        },
+        {
+            "Symbol": "JSWSTEEL",
+            "Company Name": "JSW Steel Limited",
+            "Open": 975,
+            "Day High": 980.45,
+            "Day Low": 945.65,
+            "Last Price": 954.7,
+            "Change": -22.65,
+            "PChange": -2.32
+        }
+    ]
+}
