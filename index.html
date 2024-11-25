@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nifty50 Data</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Live Nifty50 Data</h1>
+    <div id="data-container">Loading data...</div>
+    <script>
+        const dataUrl = "https://github.com/siddharthadeymohori121/StolkHolmes/blob/main/nifty50_list.csv";
+
+        async function fetchData() {
+            try {
+                const response = await fetch(dataUrl);
+                const csvText = await response.text();
+
+                // Parse CSV into rows
+                const rows = csvText.split("\n").filter(row => row.trim() !== "");
+                const headers = rows[0].split(",");
+
+                let html = `<table><tr>`;
+                headers.forEach(header => {
+                    html += `<th>${header.trim()}</th>`;
+                });
+                html += `</tr>`;
+
+                // Process each row
+                for (let i = 1; i < rows.length; i++) {
+                    const columns = rows[i].split(",");
+                    html += `<tr>`;
+                    columns.forEach(column => {
+                        html += `<td>${column.trim()}</td>`;
+                    });
+                    html += `</tr>`;
+                }
+
+                html += `</table>`;
+                document.getElementById("data-container").innerHTML = html;
+            } catch (error) {
+                document.getElementById("data-container").innerText = "Error fetching or parsing data.";
+                console.error("Error:", error);
+            }
+        }
+
+        fetchData();
+    </script>
+</body>
+</html>
