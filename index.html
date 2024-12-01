@@ -3,63 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nifty50 Stock Selector</title>
+    <title>Nifty50 Stock Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 30px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
             padding: 20px;
-            background-color: #f4f4f9;
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        .container {
+            padding: 20px;
+            text-align: center;
         }
-
-        th, td {
+        select {
             padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
+            font-size: 16px;
         }
-
-        th {
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        table {
+            margin-top: 20px;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
             background-color: #f2f2f2;
         }
-
-        select, button {
-            padding: 10px;
-            margin-top: 20px;
-        }
-
         #error {
             color: red;
+            font-size: 14px;
+            margin-top: 10px;
         }
     </style>
-    <!-- Add PapaParse CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
-    <h1>Select a Nifty50 Stock</h1>
 
-    <div>
-        <label for="stockSelect">Choose a stock: </label>
+    <header>
+        <h1>Nifty50 Stock Viewer</h1>
+    </header>
+
+    <div class="container">
+        <h2>Select a Stock</h2>
         <select id="stockSelect">
-            <option value="" disabled selected>Select a stock</option>
+            <option value="">Select a stock</option>
         </select>
+        <br>
         <button onclick="showStockData()">Show Stock</button>
+        <div id="stockData"></div>
+        <div id="error"></div>
     </div>
-
-    <div id="error"></div>
-    <div id="stockData"></div>
 
     <script>
         // Fetch Nifty50 stocks list from GitHub
         async function fetchStocks() {
             try {
                 const response = await fetch('https://raw.githubusercontent.com/siddharthadeymohori121/StolkHolmes/main/nifty50_stocks.csv');
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch CSV data');
+                }
+
                 const data = await response.text();
+                console.log('CSV Data:', data); // Log the raw CSV content
 
                 // Parse CSV data using PapaParse
                 Papa.parse(data, {
@@ -76,9 +99,9 @@
                             return;
                         }
 
-                        // Populate the dropdown with stock symbols
+                        // Populate the dropdown with symbols (ignoring the priority column)
                         stocks.forEach(stock => {
-                            const stockSymbol = stock['Stock Symbol']; // Assuming the column name is 'Stock Symbol'
+                            const stockSymbol = stock['symbol']; // Assuming the column name is 'symbol'
                             if (stockSymbol) {  // Ensure that stockSymbol is not undefined or empty
                                 const option = document.createElement('option');
                                 option.value = stockSymbol;
@@ -105,7 +128,13 @@
 
             try {
                 const response = await fetch('https://raw.githubusercontent.com/siddharthadeymohori121/StolkHolmes/main/nifty50_stocks.csv');
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch CSV data');
+                }
+
                 const data = await response.text();
+                console.log('CSV Data for Stock:', data); // Log the raw CSV content
 
                 // Parse CSV data using PapaParse
                 Papa.parse(data, {
@@ -114,7 +143,7 @@
                     dynamicTyping: true,
                     complete: function(results) {
                         const stocks = results.data;
-                        const stockData = stocks.find(stock => stock['Stock Symbol'] === selectedStock);
+                        const stockData = stocks.find(stock => stock['symbol'] === selectedStock);
 
                         if (!stockData) {
                             document.getElementById('error').textContent = 'Stock data not found.';
@@ -122,9 +151,9 @@
                         }
 
                         let tableHtml = '<table>';
-                        tableHtml += '<tr><th>Stock Symbol</th><th>Company Name</th><th>Last Price</th><th>Market Cap</th></tr>';
+                        tableHtml += '<tr><th>symbol</th><th>Company Name</th><th>Last Price</th><th>Market Cap</th></tr>';
                         tableHtml += `<tr>
-                                        <td>${stockData['Stock Symbol']}</td>
+                                        <td>${stockData['symbol']}</td>
                                         <td>${stockData['Company Name']}</td>
                                         <td>${stockData['Last Price']}</td>
                                         <td>${stockData['Market Cap']}</td>
@@ -145,5 +174,6 @@
         // Load stock list when the page loads
         window.onload = fetchStocks;
     </script>
+
 </body>
 </html>
