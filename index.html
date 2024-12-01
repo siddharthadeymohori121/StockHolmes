@@ -37,6 +37,8 @@
             color: red;
         }
     </style>
+    <!-- Add PapaParse CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
     <h1>Select a Nifty50 Stock</h1>
@@ -58,17 +60,25 @@
             try {
                 const response = await fetch('https://raw.githubusercontent.com/siddharthadeymohori121/StolkHolmes/main/nifty50_stocks.csv');
                 const data = await response.text();
-                const rows = data.split('\n').slice(1); // Skip header row
-                const stockSelect = document.getElementById('stockSelect');
 
-                rows.forEach(row => {
-                    const columns = row.split(',');
-                    const stockSymbol = columns[0]; // Assuming the stock symbol is in the first column
-
-                    const option = document.createElement('option');
-                    option.value = stockSymbol;
-                    option.textContent = stockSymbol;
-                    stockSelect.appendChild(option);
+                // Parse CSV data using PapaParse
+                Papa.parse(data, {
+                    header: true, // Use first row as header
+                    skipEmptyLines: true, // Skip empty lines
+                    dynamicTyping: true, // Automatically cast numeric values
+                    complete: function(results) {
+                        const stocks = results.data;
+                        const stockSelect = document.getElementById('stockSelect');
+                        
+                        stocks.forEach(stock => {
+                            const stockSymbol = stock['Stock Symbol']; // Assuming the column name is 'Stock Symbol'
+                            
+                            const option = document.createElement('option');
+                            option.value = stockSymbol;
+                            option.textContent = stockSymbol;
+                            stockSelect.appendChild(option);
+                        });
+                    }
                 });
 
             } catch (error) {
@@ -88,28 +98,36 @@
             try {
                 const response = await fetch('https://raw.githubusercontent.com/siddharthadeymohori121/StolkHolmes/main/nifty50_stocks.csv');
                 const data = await response.text();
-                const rows = data.split('\n').slice(1); // Skip header row
-                const stockData = rows.find(row => row.split(',')[0] === selectedStock);
 
-                if (!stockData) {
-                    document.getElementById('error').textContent = 'Stock data not found.';
-                    return;
-                }
+                // Parse CSV data using PapaParse
+                Papa.parse(data, {
+                    header: true,
+                    skipEmptyLines: true,
+                    dynamicTyping: true,
+                    complete: function(results) {
+                        const stocks = results.data;
+                        const stockData = stocks.find(stock => stock['Stock Symbol'] === selectedStock);
 
-                const columns = stockData.split(',');
+                        if (!stockData) {
+                            document.getElementById('error').textContent = 'Stock data not found.';
+                            return;
+                        }
 
-                let tableHtml = '<table>';
-                tableHtml += '<tr><th>Stock Symbol</th><th>Company Name</th><th>Last Price</th><th>Market Cap</th></tr>';
-                tableHtml += `<tr>
-                                <td>${columns[0]}</td>
-                                <td>${columns[1]}</td>
-                                <td>${columns[2]}</td>
-                                <td>${columns[3]}</td>
-                             </tr>`;
-                tableHtml += '</table>';
+                        let tableHtml = '<table>';
+                        tableHtml += '<tr><th>Stock Symbol</th><th>Company Name</th><th>Last Price</th><th>Market Cap</th></tr>';
+                        tableHtml += `<tr>
+                                        <td>${stockData['Stock Symbol']}</td>
+                                        <td>${stockData['Company Name']}</td>
+                                        <td>${stockData['Last Price']}</td>
+                                        <td>${stockData['Market Cap']}</td>
+                                    </tr>`;
+                        tableHtml += '</table>';
 
-                document.getElementById('stockData').innerHTML = tableHtml;
-                document.getElementById('error').textContent = ''; // Clear any previous error message
+                        document.getElementById('stockData').innerHTML = tableHtml;
+                        document.getElementById('error').textContent = ''; // Clear any previous error message
+                    }
+                });
+
             } catch (error) {
                 console.error('Error showing stock data:', error);
                 document.getElementById('error').textContent = 'Failed to display stock data.';
